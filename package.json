@@ -1,0 +1,21 @@
+{
+  "name": "fiat-dao-subgraph",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "CONFIG=$npm_config_config GRAPH=local NO_DEPLOY=true ./deploy.sh",
+    "deploy:local": "CONFIG=$npm_config_config GRAPH=local ./deploy.sh",
+    "deploy:rinkeby": "CONFIG=$npm_config_config GRAPH=rinkeby ./deploy.sh",
+    "deploy:mainnet": "CONFIG=$npm_config_config GRAPH=mainnet ./deploy.sh",
+    "deploy:rinkeby-remote": "CONFIG=$npm_config_config GRAPH=rinkeby-remote ./deploy.sh",
+    "deploy:mainnet-remote": "CONFIG=$npm_config_config GRAPH=mainnet-remote ./deploy.sh",
+    "deploy:mainnet-hosted": "CONFIG=$npm_config_config GRAPH=mainnet-hosted ./deploy.sh"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.21.1",
+    "@graphprotocol/graph-ts": "^0.20.1",
+    "ethers": "^5.5.1",
+    "mustache": "^4.2.0"
+  },
+  "dependencies": {
+  }
+}
