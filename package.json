@@ -8,14 +8,12 @@
     "deploy:mainnet": "CONFIG=$npm_config_config GRAPH=mainnet ./deploy.sh",
     "deploy:rinkeby-remote": "CONFIG=$npm_config_config GRAPH=rinkeby-remote ./deploy.sh",
     "deploy:mainnet-remote": "CONFIG=$npm_config_config GRAPH=mainnet-remote ./deploy.sh",
+    "deploy:rinkeby-hosted": "CONFIG=$npm_config_config GRAPH=rinkeby-hosted ./deploy.sh",
     "deploy:mainnet-hosted": "CONFIG=$npm_config_config GRAPH=mainnet-hosted ./deploy.sh"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.21.1",
     "@graphprotocol/graph-ts": "^0.20.1",
-    "ethers": "^5.5.1",
     "mustache": "^4.2.0"
-  },
-  "dependencies": {
   }
 }

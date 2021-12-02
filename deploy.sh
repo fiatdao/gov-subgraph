@@ -39,6 +39,12 @@ then
   # Remove manifest
   rm subgraph.yaml
   exit 0
+elif [ "$GRAPH" = "rinkeby-hosted" ]
+then
+  graph deploy --product hosted-service fiatdao/subgraph-rinkeby
+  # Remove manifest
+  rm subgraph.yaml
+  exit 0
 elif [ "$GRAPH" = "mainnet-hosted" ]
 then
   graph deploy --product hosted-service fiatdao/subgraph
