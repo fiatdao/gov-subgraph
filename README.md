@@ -1,6 +1,4 @@
-# FIAT DAO Subgraph
-
-Collection of Subgraphs to support the usage of the BarnBridge type of DAOs like the FIAT DAO one
+# FIAT DAO Governance Subgraph
 
 Hosted Subgraph: https://thegraph.com/hosted-service/subgraph/fiatdao/subgraph?selected=playground
 
