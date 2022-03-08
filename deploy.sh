@@ -14,6 +14,8 @@ if [[ "$NO_DEPLOY" = true ]]; then
   exit 0
 fi
 
+SUBGRAPH_NAME=fiatdao/gov-subgraph
+
 # Select IPFS and The Graph nodes
 if [ "$GRAPH" == "local" ]
 then
@@ -29,25 +31,25 @@ then
   GRAPH_NODE="http://:8020"
 elif [ "$GRAPH" = "rinkeby-remote" ]
 then
-  graph deploy --studio fiatdao
+  graph deploy --studio $SUBGRAPH_NAME
   # Remove manifest
   rm subgraph.yaml
   exit 0
 elif [ "$GRAPH" = "mainnet-remote" ]
 then
-  graph deploy --studio fiat-dao-subgraph
+  graph deploy --studio $SUBGRAPH_NAME
   # Remove manifest
   rm subgraph.yaml
   exit 0
 elif [ "$GRAPH" = "rinkeby-hosted" ]
 then
-  graph deploy --product hosted-service fiatdao/subgraph-rinkeby
+  graph deploy --product hosted-service $SUBGRAPH_NAME
   # Remove manifest
   rm subgraph.yaml
   exit 0
 elif [ "$GRAPH" = "mainnet-hosted" ]
 then
-  graph deploy --product hosted-service fiatdao/subgraph
+  graph deploy --product hosted-service $SUBGRAPH_NAME
   # Remove manifest
   rm subgraph.yaml
   exit 0
@@ -55,13 +57,13 @@ fi
 
 # Create subgraph if missing
 {
-  graph create fiatdao/fiat-dao-subgraph --node ${GRAPH_NODE}
+  graph create $SUBGRAPH_NAME --node ${GRAPH_NODE}
 } || {
   echo 'Subgraph was already created'
 }
 
 # Deploy subgraph
-graph deploy fiatdao/fiat-dao-subgraph --ipfs ${IPFS_NODE} --node ${GRAPH_NODE}
+graph deploy $SUBGRAPH_NAME --ipfs ${IPFS_NODE} --node ${GRAPH_NODE}
 
 # Remove manifest
 #rm subgraph.yaml

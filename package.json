@@ -1,5 +1,5 @@
 {
-  "name": "fiat-dao-subgraph",
+  "name": "fiat-dao-gov-subgraph",
   "version": "0.1.0",
   "scripts": {
     "build": "CONFIG=$npm_config_config GRAPH=local NO_DEPLOY=true ./deploy.sh",

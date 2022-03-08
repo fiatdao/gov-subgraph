@@ -1,6 +1,15 @@
 # FIAT DAO Governance Subgraph
 
-Hosted Subgraph: https://thegraph.com/hosted-service/subgraph/fiatdao/subgraph?selected=playground
+FIAT DAO Subgraph indexing:
+- Governance: proposals, votes and abgrogations
+- Comitium: deposits and withdrawals, vote delegation, locks
+- FDT: transfers
+- Airdrop: claims
+- Staking (YF): deposits and withdrawals
+
+Hosted Subgraph:
+- [Mainnet](https://thegraph.com/hosted-service/subgraph/fiatdao/subgraph)
+- [Rinkeby](https://thegraph.com/hosted-service/subgraph/fiatdao/subgraph-rinkeby)
 
 ## Running Local Graph Node
 

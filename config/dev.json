@@ -1,6 +1,6 @@
 {
     "network": "rinkeby",
-    "description": "FIAT DAO Graph (rinkeby)",
+    "description": "FIAT DAO Governance Subgraph (rinkeby)",
     "startBlock": 9526780,
     "Staking": "0x9E5b1200973d32DF419e5a3900A7065aaEcBd652",
     "Governance": "0x843Ec9F11E9162bD1A93428f574137Ea2dAFe695",
