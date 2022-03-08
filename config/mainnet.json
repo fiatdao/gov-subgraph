@@ -1,6 +1,6 @@
 {
   "network": "mainnet",
-  "description": "FIAT DAO Graph",
+  "description": "FIAT DAO Governance Subgraph",
   "startBlock": 13542270,
   "Staking": "0xe98ae8cD25CDC06562c29231Db339d17D02Fd486",
   "FDTAirdrop": "0xf9E68acA402bB841084E185E6F89201927F90903",

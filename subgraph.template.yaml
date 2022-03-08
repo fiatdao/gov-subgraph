@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Graph for Staking contract of the Yield Farming and DAO
-repository: https://github.com/fiatdao/subgraph
+description: FIAT DAO Subgraph indexing governance and rewards data
+repository: https://github.com/fiatdao/gov-subgraph
 schema:
   file: ./schema.graphql
 dataSources:

@@ -1,6 +1,15 @@
 # FIAT DAO Governance Subgraph
 
-Hosted Subgraph: https://thegraph.com/hosted-service/subgraph/fiatdao/subgraph?selected=playground
+FIAT DAO Subgraph indexing:
+- Governance: proposals, votes and abgrogations
+- Comitium: deposits and withdrawals, vote delegation, locks
+- FDT: transfers
+- Airdrop: claims
+- Staking (YF): deposits and withdrawals
+
+Hosted Subgraph:
+- [Mainnet](https://thegraph.com/hosted-service/subgraph/fiatdao/gov-subgraph)
+- [Rinkeby](https://thegraph.com/hosted-service/subgraph/fiatdao/gov-subgraph-rinkeby)
 
 ## Running Local Graph Node
 
@@ -10,18 +19,27 @@ Open the `docker-compose.yml` file and edit the `ethereum` node url you want to 
 
 There are `npm scripts` for all the stages of subgraph development.
 
-1. Building the subgraph (code generation + creating the subgraph): `npm run build --config={config.json}`
-2. Deploying to the Local Graph Node: `npm run deploy:local --config={config.json}`
-3. Deploying to the Rinkeby Graph Node: `npm run deploy:rinkeby --config={config.json}`
-4. Deploying to the Mainnet Graph Node: `npm run deploy:mainnet --config={config.json}`
-5. Deploying to the Rinkeby-Remote Graph Node: `npm run deploy:rinkeby-remote --config={config.json}`
-6. Deploying to the Mainnet-Remote Graph Node: `npm run deploy:mainnet-remote --config={config.json}`
-7. Deploying to the Rinkeby-Hosted Graph Node: `npm run deploy:rinkeby-hosted --config={config.json}`
-7. Deploying to the Mainnet-Hosted Graph Node: `npm run deploy:mainnet-hosted --config={config.json}`
-   Where `{config.json}` is the file name of the config you want to deploy. F.e if you want to deploy locally the mainnet config execute: `npm run deploy:local --config=mainnet.json`
+### Building the subgraph (code generation + creating the subgraph):
+`yarn build`
+
+### Deploy the Subgraph:
+`CONFIG=<CONFIG_FILE_NAME> NETWORK=<NETWORK> TARGET=<TARGET> yarn deploy`
+
+- CONFIG: `dev.json`, `mainnet.json`, `rinkeby.json`
+- NETWORK: `local`, `mainnet`, `rinkeby`
+- TARGET: `local`, `remote`, `studio`, `hosted-service` (optional)
+
+In order to deploy to a remote node the `IPFS_NODE` and `GRAPH_NODE` has to be set:
+
+`IPFS_NODE=<IPFS_NODE_URL> GRAPH_NODE=<GRAPH_NODE_URL CONFIG=<CONFIG_FILE_NAME> NETWORK=<NETWORK> yarn deploy`
+
+In order to deploy to the hosted service the `ACCESS_TOKEN` has to be set:
+
+`ACCESS_TOKEN=<THE_GRAPH_ACCESS_TOKEN> CONFIG=<CONFIG_FILE_NAME> NETWORK=<NETWORK> yarn deploy`
 
 ## Supported APIs
 
+### Governance
 - [X] Overview Info
 - [X] Get All Proposals
 - [X] Get Proposal by ID
